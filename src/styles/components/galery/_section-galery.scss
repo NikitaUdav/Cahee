@@ -48,14 +48,11 @@
   &__img-wrapper {
     position: relative;
     height: 0;
-    padding-bottom: 35%;
+    background-color: $dark;
   }
   &__col {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    background-color: $dark;
-    min-height: 200px;
     flex-shrink: 1;
     flex-grow: 1;
     &:not(:last-child) {
@@ -64,12 +61,21 @@
     &--large {
       flex-shrink: 1;
       flex-grow: 2;
-      padding-bottom: 50%;
     }
     &--smal {
       flex-shrink: 2;
       flex-grow: 1;
-      padding-bottom: 30%;
     }
+  }
+}
+.pading-hack {
+  &--large {
+    padding-bottom: 50%;
+  }
+  &--small {
+    padding-bottom: 73.8%;
+  }
+  &--medium {
+    padding-bottom: 35%;
   }
 }
