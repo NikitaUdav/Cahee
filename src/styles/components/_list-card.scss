@@ -1,8 +1,6 @@
 .list-card {
+  @include flex(space-between, stretch, column);
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   max-width: 1170px;
   @media screen and (min-width: $screen-tablet) {
     flex-direction: row;

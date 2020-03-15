@@ -9,10 +9,7 @@
   }
   &__date-box {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    @include flex(space-around, center, column);
     border-radius: 5px;
     background-color: rgba(38, 38, 38, 0.4);
     width: 60px;
@@ -21,14 +18,12 @@
     left: 30px;
   }
   &__date-day {
+    @include text($H600, 700, $white);
     line-height: 1;
-    font-size: 32px;
-    font-weight: 700;
   }
   &__date-month {
-    font-size: 21px;
-    font-weight: 900;
-    line-height: 25px;
+    @include text($H400, 900, $white);
+    line-height: 1.5;
     text-transform: uppercase;
   }
   &__gradient {
@@ -46,9 +41,7 @@
   }
   &__content {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flex(space-between, stretch, column);
     z-index: 3;
     bottom: 17px;
     left: 23px;
@@ -57,11 +50,9 @@
     line-height: 25px;
   }
   &__title {
-    font-size: 20px;
-    font-weight: 700;
+    @include text($H300, 700, $white);
   }
   &__info {
-    font-size: 13px;
-    font-weight: 300;
+    @include text($H10, 300, $white);
   }
 }

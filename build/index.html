@@ -209,7 +209,11 @@
       </div>
     </section>
     <section id="sub" class=" section section-sub">
-      <img class="back-img" src="./images/bg-sub.png" alt="img-bg" />
+      <img
+        class="back-img section-sub__back-img"
+        src="./images/bg-sub.png"
+        alt="img-bg"
+      />
       <article class=" section-sub__article article-sub">
         <h2 class="section-sub__title">Subscribe To Us</h2>
         <p class="section-sub__text">
@@ -217,14 +221,13 @@
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         </p>
         <form class="article-sub__form form-sub" action="">
-          <label class="form-sub__input-mail" for="email">
-            <input
-              class="form-sub__input-mail"
-              type="email"
-              name="email"
-              placeholder="Your email address..."
-            />
-          </label>
+          <input
+            class="form-sub__input-mail"
+            type="email"
+            name="email"
+            placeholder="Your email address..."
+          />
+      
           <button class="button form-sub__button" type="submit">SUBSCRIBE</button>
         </form>
       </article>

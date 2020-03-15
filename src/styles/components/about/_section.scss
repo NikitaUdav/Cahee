@@ -22,8 +22,7 @@
   }
 }
 .article-about {
-  display: flex;
-  flex-direction: column;
+  @include flex(flex-start, stretch, column);
   padding-top: 130px;
 
   &__title {
