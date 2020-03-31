@@ -61,6 +61,12 @@
     }
   }
   &__col {
+    transition: all 0.2s ease;
+    @media screen and(min-width:$screen-tablet) {
+      &:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
     @include flex(flex-start, stretch, column);
     flex-shrink: 1;
     flex-grow: 1;
@@ -82,11 +88,16 @@
         flex-grow: 2;
       }
     }
-    &--smal {
+    &--small {
       flex-grow: 1;
       flex-shrink: 1;
       @media screen and (min-width: $screen-tablet) {
         flex-shrink: 2;
+      }
+    }
+    &--nothover {
+      &:hover {
+        box-shadow: none;
       }
     }
   }

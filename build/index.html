@@ -175,7 +175,7 @@
               <img class="grid__img" src="./images/peach.png" alt="peach" />
             </div>
       
-            <div class="grid__col grid__col-small ">
+            <div class="grid__col grid__col--small grid__col--nothover">
               <div class="grid__row">
                 <div class="grid__col grid__img-wrapper pading-hack--small ">
                   <img class="grid__img" src="./images/currant.png" alt="currant" />
@@ -228,7 +228,7 @@
             placeholder="Your email address..."
           />
       
-          <button class="button form-sub__button" type="submit">SUBSCRIBE</button>
+          <button class="form-sub__button button" type="submit">SUBSCRIBE</button>
         </form>
       </article>
     </section>
@@ -241,8 +241,8 @@
       </p>
       <ul class="section__list list-card">
         <li class="list-card__item card-blog">
-          <div class="card__img-wrapper">
-            <img src="./images/kivi.png" alt="kivi" class="card__img img" />
+          <div class="card-blog__img-wrapper">
+            <img src="./images/kivi.png" alt="kivi" class="card-blog__img img" />
           </div>
           <div class="card-blog__date-box">
             <span class="card-blog__date-day">20</span>
@@ -347,14 +347,20 @@
               required
             ></textarea>
           </form>
-          <article class="contact">
-            <span class="contact__title">address</span>
-            <h3 class=" contact__text">123 City Name, Street, City, Country</span>
-            <span class="contact__title">email</span>
-            <h3 class=" contact__text">cahee@domain.com</h3>
-            <span class="contact__title">phone</span>
-            <h3 class=" contact__text">+012 345 6789</h3>
-          </article>
+          <ul class="contact">
+            <li class="contact__item">
+              <span class="contact__title">address</span>
+              <h3 class=" contact__text">123 City Name, Street, City, Country</h3>
+            </li>
+            <li class="contact__item">
+              <span class="contact__title">email</span>
+              <h3 class=" contact__text">cahee@domain.com</h3>
+            </li>
+            <li class="contact__item">
+              <span class="contact__title">phone</span>
+              <h3 class=" contact__text">+012 345 6789</h3>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

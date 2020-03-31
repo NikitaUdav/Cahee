@@ -1,7 +1,7 @@
 .section-about {
   background-color: $about-bg-color;
   padding-top: 37px;
-
+  padding-bottom: 70px;
   &__container {
     @include flex(center, stretch, row, wrap);
     height: 100%;

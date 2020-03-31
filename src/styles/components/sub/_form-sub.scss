@@ -13,7 +13,7 @@
     max-width: 350px;
     height: 55px;
     margin-bottom: 40px;
-
+    padding-left: 20px;
     @media screen and (min-width: $screen-tablet) {
       margin-bottom: 0;
       max-width: 572px;
@@ -28,8 +28,7 @@
   &__button {
     height: 55px;
     max-width: 350px;
-    text-transform: uppercase;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
     background-color: $subscribe-btn-color;
     color: $white;
     @media screen and (min-width: $screen-tablet) {
