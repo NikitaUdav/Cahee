@@ -39,10 +39,21 @@
   }
 }
 .contact-form {
+  transition: all 0.2s ease;
   @include flex(flex-start, stretch, column);
   width: 100%;
   max-width: 500px;
   margin-bottom: 50px;
+  &__wrapper {
+    @include flex(flex-start, stretch, column);
+    width: 100%;
+    max-width: 500px;
+  }
+  &:valid > .form-button {
+    @include flex(center, center);
+    opacity: 1;
+    visibility: visible;
+  }
   @media screen and (min-width: $screen-tablet) {
     margin-bottom: 0px;
   }
@@ -77,12 +88,31 @@
       color: $white;
     }
   }
-
   &__item-message {
     padding-top: 20px;
     height: 250px;
     resize: none;
     font-family: $base-font;
+  }
+}
+.form-button {
+  @include text($H300, 300, $white);
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: all 0.2s ease;
+  background-color: $contact-bg-color;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  height: 50px;
+  opacity: 0;
+  visibility: hidden;
+  @media screen and (min-width: $screen-desktop) {
+    &:hover {
+      box-shadow: 0 2px 5px 0 rgba(black, 0.5);
+    }
   }
 }
 .contact {
@@ -98,7 +128,7 @@
     }
   }
   @media screen and (min-width: $screen-tablet) {
-    order: 0;
+    order: 2;
     margin-bottom: 0;
     text-align: start;
   }
