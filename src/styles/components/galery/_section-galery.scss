@@ -1,0 +1,117 @@
+.section-galery {
+  background-color: $gallery-bg-color;
+  &__title {
+    @include text($H900, 700, $dark);
+    margin-bottom: 28px;
+  }
+  &__subtitle {
+    max-width: 600px;
+    line-height: 1.5;
+    margin-bottom: 47px;
+    @include text($H200, 300, $dark);
+  }
+  &__container {
+    @include flex(flex-start, center, column);
+    padding-top: 100px;
+    text-align: center;
+  }
+  &__button {
+    background-color: $gallery-btn-color;
+    margin-bottom: 120px;
+  }
+}
+.grid {
+  width: 100%;
+  margin-bottom: 50px;
+  max-width: 1200px;
+
+  &__row {
+    @include flex(flex-start, stretch, column);
+    flex-shrink: 1;
+    flex-grow: 1;
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: $screen-tablet) {
+      flex-direction: row;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__img-wrapper {
+    position: relative;
+    height: 0;
+    background-color: $dark;
+    padding-bottom: 69.5%;
+
+    @media screen and (min-width: $screen-tablet) {
+      padding-bottom: 0;
+    }
+  }
+  &__col {
+    transition: all 0.2s ease;
+    @media screen and(min-width:$screen-tablet) {
+      &:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+    @include flex(flex-start, stretch, column);
+    flex-shrink: 1;
+    flex-grow: 1;
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: $screen-tablet) {
+      &:not(:last-child) {
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+    }
+
+    &--large {
+      flex-shrink: 1;
+      flex-grow: 1;
+
+      @media screen and (min-width: $screen-tablet) {
+        flex-grow: 2;
+      }
+    }
+    &--small {
+      flex-grow: 1;
+      flex-shrink: 1;
+      @media screen and (min-width: $screen-tablet) {
+        flex-shrink: 2;
+      }
+    }
+    &--nothover {
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+.pading-hack {
+  @media screen and (min-width: $screen-tablet) {
+    &--large {
+      padding-bottom: 50%;
+    }
+    &--small {
+      padding-bottom: 73.8%;
+    }
+    &--medium {
+      padding-bottom: 35%;
+    }
+  }
+}

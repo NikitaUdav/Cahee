@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,400,700,900&display=swap"); // Шрифты
+
+// Основные блоки
+@import "./core/vars";
+@import "./core/inheritance";
+@import "./core/mixins";
+@import "./core/common";
+@import "./components/button";
+@import "./components/section";
+@import "./components/burger";
+@import "./components/list-card";
+@import "./components/logo";
+@import "./components/navigation";
+@import "./components/header";
+//Mods about
+@import "./components/about/section";
+//Mods our services
+@import "./components/our_services/section";
+// Mods galery
+@import "./components/galery/section-galery";
+//Mods sub
+@import "./components/sub/section-sub";
+//Mods blog
+@import "./components//blog-theme/card-blog";
+@import "./components/blog-theme/section";
+//Mods contact
+@import "./components/contact/contact";
+@import "./components/sub/form-sub";

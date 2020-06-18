@@ -1,0 +1,60 @@
+.card-blog {
+  transition: all 0.2s ease;
+  cursor: pointer;
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+  &__img-wrapper {
+    max-width: 370px;
+    max-height: 310px;
+  }
+  &__date-box {
+    position: absolute;
+    @include flex(space-around, center, column);
+    border-radius: 5px;
+    background-color: rgba(38, 38, 38, 0.4);
+    width: 60px;
+    height: 60px;
+    top: 30px;
+    left: 30px;
+  }
+  &__date-day {
+    @include text($H600, 700, $white);
+    line-height: 1;
+  }
+  &__date-month {
+    @include text($H400, 900, $white);
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  &__gradient {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    max-width: 370px;
+    height: 45%;
+    z-index: 2;
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  &__content {
+    position: absolute;
+    @include flex(space-between, stretch, column);
+    z-index: 3;
+    bottom: 17px;
+    left: 23px;
+    height: 89px;
+    max-width: 350px;
+    line-height: 25px;
+  }
+  &__title {
+    @include text($H300, 700, $white);
+  }
+  &__info {
+    @include text($H10, 300, $white);
+  }
+}
